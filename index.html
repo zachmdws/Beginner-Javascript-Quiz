@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <title>Javascript Quiz</title>
+    </head>
+
+<body>
+
+    <button id="hiScoresbtn" onclick="viewHiScores()">View Highscores</button>
+    <h4 >Time: <span id="time">  0</span></h4>
+
+
+
+<div class="container">
+<div id = questionBox style = "display: none;">
+    <div id="question"> <p>Question </p></div>
+    
+    <div id ="options">
+        <button class="option" style="display: none;" id="A" onclick="checkOption('A')">A</button><br>
+        <button class="option" style="display: none;" id="B" onclick="checkOption('B')">B</button><br>
+        <button class="option" style="display: none;" id="C" onclick="checkOption('C')">C</button><br>
+    </div>
+    
+</div>
+
+
+
+<div id="main">
+    <p>Welcome to a short and simple basic Javascript quiz! You will have 75 seconds to answer all of the questions but be careful, if you get
+       a question wrong the timer will decrease by 10 seconds! You will be able to see yourself and others' scores at the end of the quiz. Good luck!
+    </p>
+    <button type="button" class="btn btn-outline-primary" id="startButton" name="startButton">Start Quiz</button>
+</div>
+
+<div id="hiScores" style="display: none;" >
+    <h3>Pencils down, the quiz is done!</h3>
+    <br>
+    <p>Your final score is <span id="finalScore">0</span></p>
+    <br>
+    <form>
+        Enter your initials: <input id = "name" name = "name" type= "text"><input id="submitHi" type="submit">
+    </form>
+</div>
+
+
+<div id="scoreBoard" style="display: none;">
+    <h2>Highscores</h2>
+    <ul id="highscore-list">
+        
+    </ul>
+    <br><br>
+
+    <button id="goBack" onclick="goBack()">Go Back</button>
+    
+    <button id="clEar" onclick="clearScores()">Clear Scores</button>
+    
+</div>
+</div>
+
+<script src="./Assets/JS/script.js"></script>
+</body>
+</html>
